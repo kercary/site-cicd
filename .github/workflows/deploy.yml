@@ -19,6 +19,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Artificial check (демонстрация ошибки)
+        run: |
+          echo "Этот шаг специально завершается с ошибкой для демонстрации."
+          exit 1
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
